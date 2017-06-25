@@ -45,8 +45,8 @@ SketchPad.prototype.reset = function() {
     $('#sketch').empty();
     this.num = 0;
 
-    while( this.num < 1 || this.num > 60 ) {
-        this.num = prompt('Select size between 1 and 60');
+    while( this.num < 1 || this.num > 64 ) {
+        this.num = prompt('Select size between 1 and 64');
     }
 
     this.init();
