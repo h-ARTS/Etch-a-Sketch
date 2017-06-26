@@ -3,19 +3,19 @@
  * Author: Hanan Mufti
  */
 
-function SketchPad(num, color) {
+function SketchPad(num, bgcolor) {
     this.num = num;
-    this.color = color;
+    this.bgcolor = bgcolor;
 }
 
 SketchPad.prototype.init = function() {
 
-    if (this.num && this.color) {
+    if (this.num && this.bgcolor) {
         this.num;
-        this.color;
+        this.bgcolor;
     } else {
         this.num = 20;
-        this.color = '#000000';
+        this.bgcolor = '#000000';
     }
 
     this.render();
@@ -36,7 +36,7 @@ SketchPad.prototype.render = function() {
 
     }
 
-    jQuery('.block').css({ 'width': 600 / this.num, 'height': 600 / this.num, 'background-color': this.color });
+    jQuery('.block').css({ 'width': 600 / this.num, 'height': 600 / this.num, 'background-color': this.bgcolor });
 
 }
 
@@ -58,7 +58,7 @@ SketchPad.prototype.colorize = function() {
     var codes = '0123456789ABCDEF',
         color = '#';
 
-    for(var c = 0; c < 6; c++) {
+    for (var c = 0; c < 6; c++) {
         color += codes[Math.floor(Math.random() * 16)];
     }
 
@@ -84,9 +84,9 @@ jQuery(document).ready(function($) {
             $(this).css('background-color', sketchpad.colorize());
         });
 
-        $('.block').mouseleave(function() {
+        /*$('.block').mouseleave(function() {
             sketchpad.colorize();
-        });
+        });*/
 
     }
 
