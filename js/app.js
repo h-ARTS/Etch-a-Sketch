@@ -14,6 +14,7 @@ SketchPad.prototype.init = function() {
         this.num;
         this.bgcolor;
     } else {
+        // Default values
         this.num = 20;
         this.bgcolor = '#000000';
     }
@@ -83,10 +84,6 @@ jQuery(document).ready(function($) {
         $('.block').mouseover(function() {
             $(this).css('background-color', sketchpad.colorize());
         });
-
-        /*$('.block').mouseleave(function() {
-            sketchpad.colorize();
-        });*/
 
     }
 
